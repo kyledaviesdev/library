@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Text.Json;
 
 class Program
 {
@@ -7,9 +9,10 @@ class Program
     {
         Library myLibrary = new Library();
 
-        myLibrary.AddBook(new Book("The Hitchhiker's Guide to the Galaxy", "Douglas Adams", 1979));
-        myLibrary.AddBook(new Book("Pride and Prejudice", "Jane Austen", 1813));
-        myLibrary.AddBook(new Book("1984", "George Orwell", 1949));
+        // Load books from JSON file
+        string jsonFilePath = @"C:\CSE 310\library\books.json";
+        myLibrary.LoadBooksFromJson(jsonFilePath);
+
 
         myLibrary.DisplayAllBooks();
 
