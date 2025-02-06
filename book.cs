@@ -1,16 +1,12 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Text.Json;
 
 public class Book
 {
-    public string Title { get; set; }
+    public string Title { get; set; } // Use properties (better practice)
     public string Author { get; set; }
     public int PublishDate { get; set; }
     public bool IsAvailable { get; set; }
-
-    public Book() { } // Parameterless constructor for JSON deserialization
 
     public Book(string title, string author, int publishDate)
     {
@@ -22,6 +18,6 @@ public class Book
 
     public void Display()
     {
-        Console.WriteLine($"{Title} ({Author}) {PublishDate} | {(IsAvailable ? "Available" : "Unavailable")}");
+        Console.WriteLine($"{Title} ({Author}) {PublishDate} | {(IsAvailable ? "Available" : "Unavailable")}"); // Nicer output
     }
 }

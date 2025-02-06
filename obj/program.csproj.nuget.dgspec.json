@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\CSE 310\\library\\program.csproj": {}
+    "C:\\CSE 310\\library\\program.csproj": {}
   },
   "projects": {
-    "c:\\CSE 310\\library\\program.csproj": {
+    "C:\\CSE 310\\library\\program.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\CSE 310\\library\\program.csproj",
+        "projectUniqueName": "C:\\CSE 310\\library\\program.csproj",
         "projectName": "program",
-        "projectPath": "c:\\CSE 310\\library\\program.csproj",
+        "projectPath": "C:\\CSE 310\\library\\program.csproj",
         "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
-        "outputPath": "c:\\CSE 310\\library\\obj\\",
+        "outputPath": "C:\\CSE 310\\library\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config"
