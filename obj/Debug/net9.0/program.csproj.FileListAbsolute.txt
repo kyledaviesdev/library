@@ -12,3 +12,4 @@ c:\CSE 310\library\obj\Debug\net9.0\refint\program.dll
 c:\CSE 310\library\obj\Debug\net9.0\program.pdb
 c:\CSE 310\library\obj\Debug\net9.0\program.genruntimeconfig.cache
 c:\CSE 310\library\obj\Debug\net9.0\ref\program.dll
+C:\CSE 310\library\obj\Debug\net9.0\program.sourcelink.json
