@@ -4,12 +4,17 @@ using System.Collections.Generic;
 public class Library
 {
     private List<Book> Books { get; set; } = new List<Book>();
+    private int nextLibraryId = 1; // To generate unique IDs
 
     public void AddBook(Book book)
     {
         Books.Add(book);
     }
 
+    public void AddBook(string title, string author, int publishDate) // Overload to auto-generate ID
+    {
+        Books.Add(new Book(title, author, publishDate, nextLibraryId++));
+    }
     public void DisplayAllBooks()
     {
         if (Books.Count == 0)
@@ -30,22 +35,38 @@ public class Library
         Console.Write("Enter the title of the book to check out: ");
         string title = Console.ReadLine();
 
-        foreach (Book book in Books)
+        List<Book> matchingBooks = Books.FindAll(b => b.Title.Equals(title, StringComparison.OrdinalIgnoreCase));
+
+        if (matchingBooks.Count == 0)
         {
-            if (book.Title.Equals(title, StringComparison.OrdinalIgnoreCase) && book.IsAvailable)
+            Console.WriteLine($"No books found with the title '{title}'.");
+            return;
+        }
+
+        Console.WriteLine("Matching books:");
+        foreach (Book book in matchingBooks)
+        {
+            book.Display();
+        }
+
+        Console.Write("Enter the Library ID of the book to check out: ");
+        if (!int.TryParse(Console.ReadLine(), out int libraryId))
+        {
+            Console.WriteLine("Invalid Library ID.");
+            return;
+        }
+
+        foreach (Book book in matchingBooks)
+        {
+            if (book.LibraryId == libraryId && book.IsAvailable)
             {
                 book.IsAvailable = false;
-                Console.WriteLine($"{book.Title} checked out successfully.");
-                return;
-            }
-            else if (book.Title.Equals(title, StringComparison.OrdinalIgnoreCase) && !book.IsAvailable)
-            {
-                Console.WriteLine($"{book.Title} is currently unavailable.");
+                Console.WriteLine($"{book.Title} (ID: {book.LibraryId}) checked out successfully.");
                 return;
             }
         }
 
-        Console.WriteLine($"Book with title '{title}' not found.");
+        Console.WriteLine($"Book with title '{title}' and ID '{libraryId}' not found or unavailable.");
     }
 
     public void FindBook()
@@ -118,24 +139,45 @@ public class Library
         Console.Write("Enter the title of the book to return: ");
         string title = Console.ReadLine();
 
-        foreach (Book book in Books)
+        List<Book> matchingBooks = Books.FindAll(b => b.Title.Equals(title, StringComparison.OrdinalIgnoreCase));
+
+        if (matchingBooks.Count == 0)
         {
-            if (book.Title.Equals(title, StringComparison.OrdinalIgnoreCase))
+            Console.WriteLine($"No books found with the title '{title}'.");
+            return;
+        }
+
+        Console.WriteLine("Matching books:");
+        foreach (Book book in matchingBooks)
+        {
+            book.Display();
+        }
+
+        Console.Write("Enter the Library ID of the book to return: ");
+        if (!int.TryParse(Console.ReadLine(), out int libraryId))
+        {
+            Console.WriteLine("Invalid Library ID.");
+            return;
+        }
+
+        foreach (Book book in matchingBooks)
+        {
+            if (book.LibraryId == libraryId)
             {
                 if (!book.IsAvailable)
                 {
                     book.IsAvailable = true;
-                    Console.WriteLine($"{book.Title} returned successfully.");
+                    Console.WriteLine($"{book.Title} (ID: {book.LibraryId}) returned successfully.");
                     return;
                 }
                 else
                 {
-                    Console.WriteLine($"{book.Title} is already available.");
+                    Console.WriteLine($"{book.Title} (ID: {book.LibraryId}) is already available.");
                     return;
                 }
             }
         }
 
-        Console.WriteLine($"Book with title '{title}' not found.");
+        Console.WriteLine($"Book with title '{title}' and ID '{libraryId}' not found.");
     }
 }
