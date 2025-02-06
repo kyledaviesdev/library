@@ -3,16 +3,39 @@
     "tasks": [
         {
             "label": "build",
-            "command": "dotnet", // Or "csc program.cs" if you prefer command-line compilation
+            "command": "dotnet",
+            "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/program.csproj", // If you have a project file
-                // Or just remove the .csproj line if you're compiling directly
+                "${workspaceFolder}/library.sln",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
             ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/library.sln",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "watch",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "run",
+                "--project",
+                "${workspaceFolder}/library.sln"
+            ],
+            "problemMatcher": "$msCompile"
         }
     ]
 }

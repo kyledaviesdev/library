@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class Book
 {
-    public string Title { get; set; } // Use properties (better practice)
+    public string Title { get; set; } 
     public string Author { get; set; }
     public int PublishDate { get; set; }
     public bool IsAvailable { get; set; }

@@ -8,19 +8,19 @@
     "net9.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Owner\\.nuget\\packages\\": {}
+    "C:\\Users\\kylem\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\CSE 310\\library\\program.csproj",
+      "projectUniqueName": "D:\\School\\Programming\\CSE 310\\library\\program.csproj",
       "projectName": "program",
-      "projectPath": "C:\\CSE 310\\library\\program.csproj",
-      "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
-      "outputPath": "C:\\CSE 310\\library\\obj\\",
+      "projectPath": "D:\\School\\Programming\\CSE 310\\library\\program.csproj",
+      "packagesPath": "C:\\Users\\kylem\\.nuget\\packages\\",
+      "outputPath": "D:\\School\\Programming\\CSE 310\\library\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\kylem\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
