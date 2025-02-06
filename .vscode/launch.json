@@ -1,0 +1,27 @@
+
+{
+    "version": "2.0.0",
+    "tasks": [
+
+        {
+            "label": "build-library",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/program.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ],
+    "configurations": [
+    {
+        "name": "C#: program Debug",
+        "type": "dotnet",
+        "request": "launch",
+        "projectPath": "${workspaceFolder}/program.csproj"
+    }
+    ]
+}

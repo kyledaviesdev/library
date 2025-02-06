@@ -1,0 +1,14 @@
+c:\CSE 310\library\bin\Debug\net9.0\program.exe
+c:\CSE 310\library\bin\Debug\net9.0\program.deps.json
+c:\CSE 310\library\bin\Debug\net9.0\program.runtimeconfig.json
+c:\CSE 310\library\bin\Debug\net9.0\program.dll
+c:\CSE 310\library\bin\Debug\net9.0\program.pdb
+c:\CSE 310\library\obj\Debug\net9.0\program.GeneratedMSBuildEditorConfig.editorconfig
+c:\CSE 310\library\obj\Debug\net9.0\program.AssemblyInfoInputs.cache
+c:\CSE 310\library\obj\Debug\net9.0\program.AssemblyInfo.cs
+c:\CSE 310\library\obj\Debug\net9.0\program.csproj.CoreCompileInputs.cache
+c:\CSE 310\library\obj\Debug\net9.0\program.dll
+c:\CSE 310\library\obj\Debug\net9.0\refint\program.dll
+c:\CSE 310\library\obj\Debug\net9.0\program.pdb
+c:\CSE 310\library\obj\Debug\net9.0\program.genruntimeconfig.cache
+c:\CSE 310\library\obj\Debug\net9.0\ref\program.dll

@@ -1,0 +1,18 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet", // Or "csc program.cs" if you prefer command-line compilation
+            "args": [
+                "build",
+                "${workspaceFolder}/program.csproj", // If you have a project file
+                // Or just remove the .csproj line if you're compiling directly
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
