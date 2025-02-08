@@ -3,7 +3,7 @@
 This project is just a simple overview of what I can do in C#. An example of a library that contains books, you can
 view all the books in the library and their availability. 
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/Oh11q232PXI)
 
 # Development Environment
 
@@ -11,8 +11,8 @@ I used C#, .Net, VSCode and git hub for this project.
 
 # Useful Websites
 
-- [Web Site Name](http://url.link.goes.here)
-- [Web Site Name](http://url.link.goes.here)
+- [Microsoft DotNet](https://dotnet.microsoft.com/en-us/download)
+- [GitHub](http://https://github.com/)
 
 # Future Work
 
